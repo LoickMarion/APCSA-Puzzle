@@ -10,7 +10,7 @@ public class Pieces   {
     private Color color;
 
 
-    public Pieces(int pX, int pY, int rotation, int[][] pieceArray, Color pieceColor)
+    public Pieces(int pX, int pY,int[][] pieceArray, Color pieceColor)
     {
         array = pieceArray;
         x=pX;

@@ -12,7 +12,9 @@ public class BoardGraphics extends Board implements ActionListener, KeyListener,
     private final int windowHeight = 650;
     private final int boardHeight = 400;
     private final int boardWidth = 400;
+
     private boolean right, left, up, down, turnRight, turnLeft;
+    
     private final int boardXEnd = (boardWidth + windowWidth) /2;
     private final int boardXStart = boardXEnd - boardWidth;
     private final int boardYEnd = (boardHeight + windowHeight) /2;
@@ -22,7 +24,6 @@ public class BoardGraphics extends Board implements ActionListener, KeyListener,
     private Timer timer;
     public static int selected =0;
     private static final Scanner kboard = new Scanner(System.in);
-    //private static final Scanner mouse = new Scanner(System.in);
     private int mouseX;
     private int mouseY;
 
@@ -34,14 +35,7 @@ public class BoardGraphics extends Board implements ActionListener, KeyListener,
     {
         setPreferredSize(new Dimension(windowWidth, windowHeight));
     }
-    /*public int convertToBoardXCoord(int n){
-        return (n-boardXStart)/square;
-    }
-    public int convertToBoardYCoord(int n){
-        return (n-boardYStart)/square;
-    }
 
-     */
     public Color getSquareColor(int x, int y) {
        Color clickedColor = Color.red;
         try {
@@ -156,6 +150,7 @@ public class BoardGraphics extends Board implements ActionListener, KeyListener,
         if(turnLeft){
             board.piece[selected].rotateLeft(board.piece[selected].getArray());
         }
+
         //stops a piece from leaving the screen
         if(board.piece[selected].getX() <-8)
         {
@@ -171,6 +166,7 @@ public class BoardGraphics extends Board implements ActionListener, KeyListener,
         if(board.piece[selected].getY() > 8){
             board.piece[selected].setY(8,board.piece[selected]);
         }
+
         //allows the player to win
         if(board.gameBoard == board.finishedBoard){
             System.out.println("you win");
@@ -183,9 +179,7 @@ public class BoardGraphics extends Board implements ActionListener, KeyListener,
         mouseX = e.getXOnScreen();
         mouseY = e.getYOnScreen();
         Color a = getSquareColor(mouseX,mouseY);
-        //System.out.println(a);
-        //System.out.println(board.piece[0].getColor());
-        //System.out.println(selected);
+
          if(a.equals(board.piece[0].getColor())){
              selected =0;
          }
@@ -295,27 +289,17 @@ public class BoardGraphics extends Board implements ActionListener, KeyListener,
 
         puzzle.addKeyListener(puzzle);
         frame.addKeyListener(puzzle);
+        
         puzzle.addMouseListener(puzzle);
         frame.addMouseListener(puzzle);
 
-
-
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-
-
         frame.setVisible(true);
         frame.pack();
 
-
-
-
-        puzzle.setUpPuzzle();
-
-
+         puzzle.setUpPuzzle();
     }
-
 }
 
 

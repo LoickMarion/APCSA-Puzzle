@@ -158,19 +158,19 @@ public class Board extends JPanel {
         Color color10 = new Color(30,30,80);
         Color color11 = new Color(130,120,191);
         Color color12= new Color(110,180,60);
-        board.piece[0] = new Pieces((int)(Math.random() * 20) -8 ,(int)(Math.random()*10) -3,0, array0, color0);
-        board.piece[1] = new Pieces((int)(Math.random() * 20) -8 ,(int)(Math.random()*10) -3,0, array1,color1);
-        board.piece[2] = new Pieces((int)(Math.random() * 20) -8 ,(int)(Math.random()*10) -3,0, array2,color2);
-        board.piece[3] = new Pieces((int)(Math.random() * 20) -8 ,(int)(Math.random()*10) -3,0, array3,color3);
-        board.piece[4] = new Pieces((int)(Math.random() * 20) -8 ,(int)(Math.random()*10) -3,0, array4,color4);
-        board.piece[5] = new Pieces((int)(Math.random() * 20) -8 ,(int)(Math.random()*10) -3,0, array5,color5);
-        board.piece[6] = new Pieces((int)(Math.random() * 20) -8 ,(int)(Math.random()*10) -3,0, array6,color6);
-        board.piece[7] = new Pieces((int)(Math.random() * 20) -8 ,(int)(Math.random()*10) -3,0, array7,color7);
-        board.piece[8] = new Pieces((int)(Math.random() * 20) -8 ,(int)(Math.random()*10) -3,0, array8,color8);
-        board.piece[9] = new Pieces((int)(Math.random() * 20) -8 ,(int)(Math.random()*10) -3,0, array9,color9);
-        board.piece[10] = new Pieces((int)(Math.random() * 20) -8 ,(int)(Math.random()*10) -3,0, array10,color10);
-        board.piece[11] = new Pieces((int)(Math.random() * 20) -8 ,(int)(Math.random()*10) -3,0, array11,color11);
-        board.piece[12] = new Pieces((int)(Math.random() * 20) -8 ,(int)(Math.random()*10) -3,0, array12,color12);
+        board.piece[0] = new Pieces((int)(Math.random() * 20) -8 ,(int)(Math.random()*10) -3, array0, color0);
+        board.piece[1] = new Pieces((int)(Math.random() * 20) -8 ,(int)(Math.random()*10) -3, array1,color1);
+        board.piece[2] = new Pieces((int)(Math.random() * 20) -8 ,(int)(Math.random()*10) -3, array2,color2);
+        board.piece[3] = new Pieces((int)(Math.random() * 20) -8 ,(int)(Math.random()*10) -3, array3,color3);
+        board.piece[4] = new Pieces((int)(Math.random() * 20) -8 ,(int)(Math.random()*10) -3, array4,color4);
+        board.piece[5] = new Pieces((int)(Math.random() * 20) -8 ,(int)(Math.random()*10) -3, array5,color5);
+        board.piece[6] = new Pieces((int)(Math.random() * 20) -8 ,(int)(Math.random()*10) -3, array6,color6);
+        board.piece[7] = new Pieces((int)(Math.random() * 20) -8 ,(int)(Math.random()*10) -3, array7,color7);
+        board.piece[8] = new Pieces((int)(Math.random() * 20) -8 ,(int)(Math.random()*10) -3, array8,color8);
+        board.piece[9] = new Pieces((int)(Math.random() * 20) -8 ,(int)(Math.random()*10) -3, array9,color9);
+        board.piece[10] = new Pieces((int)(Math.random() * 20) -8 ,(int)(Math.random()*10) -3, array10,color10);
+        board.piece[11] = new Pieces((int)(Math.random() * 20) -8 ,(int)(Math.random()*10) -3, array11,color11);
+        board.piece[12] = new Pieces((int)(Math.random() * 20) -8 ,(int)(Math.random()*10) -3, array12,color12);
         for(int n=0;n<13;n++) {
             board.addMatrix(board.gameBoard, board.piece[n]);
         }
