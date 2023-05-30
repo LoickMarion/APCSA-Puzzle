@@ -17,14 +17,13 @@ public class Pieces   {
         y=pY;
         color = pieceColor;
     }
+
     public int getX() {
         return x;
     }
-
     public void setX(int n, Pieces piece) {
         piece.x =n;
     }
-
     public int getY() {
         return y;
     }
@@ -34,7 +33,6 @@ public class Pieces   {
     public int[][] getArray(){
         return array;
     }
-
     public Color getColor(){
         return color;
     }
@@ -58,6 +56,7 @@ public class Pieces   {
             }
         }
     }
+
     public void rotateRight(int[][] array){
         rotateLeft(array);
         rotateLeft(array);
@@ -77,14 +76,4 @@ public class Pieces   {
     public void moveRight(Pieces piece){
         piece.x += 1;
     }
-
-
-
-
-
-
-
-
-
-
 }

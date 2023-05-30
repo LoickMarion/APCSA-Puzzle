@@ -14,7 +14,7 @@ public class BoardGraphics extends Board implements ActionListener, KeyListener,
     private final int boardWidth = 400;
 
     private boolean right, left, up, down, turnRight, turnLeft;
-    
+
     private final int boardXEnd = (boardWidth + windowWidth) /2;
     private final int boardXStart = boardXEnd - boardWidth;
     private final int boardYEnd = (boardHeight + windowHeight) /2;
@@ -26,9 +26,6 @@ public class BoardGraphics extends Board implements ActionListener, KeyListener,
     private static final Scanner kboard = new Scanner(System.in);
     private int mouseX;
     private int mouseY;
-
-
-
 
 
     public BoardGraphics()
@@ -48,12 +45,12 @@ public class BoardGraphics extends Board implements ActionListener, KeyListener,
         return clickedColor;
 
     }
+
     public void actionPerformed(ActionEvent e) {
         update();
         repaint();
 
     }
-
 
     public void keyTyped(KeyEvent e) {
 
@@ -88,7 +85,6 @@ public class BoardGraphics extends Board implements ActionListener, KeyListener,
 
     }
 
-
     public void keyReleased(KeyEvent e)
     {
         if(e.getKeyCode() == KeyEvent.VK_D)
@@ -117,6 +113,7 @@ public class BoardGraphics extends Board implements ActionListener, KeyListener,
             turnLeft = false;
         }
     }
+
     public void setUpPuzzle(){
 
         if(timer != null){
@@ -128,6 +125,7 @@ public class BoardGraphics extends Board implements ActionListener, KeyListener,
         up=down=left=right=turnRight=turnLeft=false;
         board.setUp();
     }
+    
     public void update()
     {
 
